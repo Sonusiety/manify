@@ -42,10 +42,9 @@ docs = [
 ]
 
 [tool.setuptools]
-packages = ["manify"]
-
-[tool.setuptools.packages]
-find = { include = ["manify*"] }
+# no "packages" key here—only the find directive
+[tool.setuptools.packages.find]
+include = ["manify", "manify.*"]
 
 [tool.setuptools.package-data]
 "manify" = ["../data/**/*"]
