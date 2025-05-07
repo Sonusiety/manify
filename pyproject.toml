@@ -44,6 +44,9 @@ docs = [
 [tool.setuptools]
 packages = ["manify"]
 
+[tool.setuptools.packages]
+find = { include = ["manify*"] }
+
 [tool.setuptools.package-data]
 "manify" = ["../data/**/*"]
 
